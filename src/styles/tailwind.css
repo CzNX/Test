@@ -1,3 +1,80 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .bg1 {
+    background: rgb(105, 44, 20);
+  }
+  .bg2 {
+    background: rgb(241, 244, 247);
+  }
+  .bg3 {
+    background: rgb(255, 72, 2);
+  }
+
+  .label {
+    background: rgba(0, 0, 0, 0.74);
+  }
+  .over {
+    background: rgba(0, 0, 0, 0.45);
+  }
+  .over2 {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* animate */
+.anime {
+  animation: appear 1s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.anime2 {
+  animation: appear2 400ms;
+}
+
+@keyframes appear2 {
+  0% {
+    padding-top: 40px;
+  }
+  100% {
+    padding-top: 12px;
+  }
+}
+
+.carousel-slider {
+  height: 100% !important;
+}
+
+@media (min-width: 768px) {
+  .carousel-slider {
+    height: 81vh !important;
+  }
+}
+
+@layer components {
+  .navStyle {
+    @apply hover:text-green-500 border-b border-gray-300 uppercase;
+  }
+
+  .navDef {
+    @apply uppercase cursor-pointer hover:text-yellow-600;
+  }
+  .fotter1 {
+    @apply border-b w-full border-gray-300 p-5 space-y-2 sm:border-b-0 sm:border-r;
+  }
+}
